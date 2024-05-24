@@ -1,3 +1,5 @@
+import 'package:flutter_extension/flutter_extension.dart';
+
 extension DoubleOption on double {
 
   String string() => "$this";
@@ -5,40 +7,13 @@ extension DoubleOption on double {
   /*
   * 加千分号
   * */
-  String formatNumByInt(int num) {
-    if (num >= 1000) {
-      String value = "$num";
-      String sub = "";
-      int size = value.length;
-      for (var i = 0; i < size; ++i) {
-        var bean = value[i];
-        sub += bean;
-        if ((size - i - 1) % 3 == 0 && i != size - 1) {
-          sub += ",";
-        }
-      }
-      return sub;
-    } else {
-      return "$num";
-    }
-  }
-
-  /*
-  * 加千分号
-  * */
-  String get formatNum {
+  String get thousands {
     List<String> numSub = '$this'.split(".");
     try {
-      int upValue = int.parse(numSub.first);
-      String value = formatNumByInt(upValue);
-      for (var i = 1; i < numSub.length; ++i) {
-        var bean = numSub[i];
-        if (i == 1) {
-          value += ".";
-        }
-        value += bean;
+      var result = numSub.first.thousands;
+      if(numSub.length > 1){
+        result = "$result.${numSub[1]}";
       }
-      return value;
     } catch (e) {
       Future.error(e);
     }

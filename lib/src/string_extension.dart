@@ -6,7 +6,6 @@ import 'package:convert/convert.dart' as convert;
 import 'package:crypto/crypto.dart' as crypto;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_extension/src/ad_extension.dart';
-import 'package:flutter_extension/src/date_extension.dart';
 
 /*
 * 字符串常规操作
@@ -46,7 +45,7 @@ extension StringOption on String? {
   /*
   * 加千分号
   * */
-  String? get thousandSymbol {
+  String? get thousands {
     if (isEmptyOrNull) return "";
     List<String> numSub = this!.split(".");
     try {
