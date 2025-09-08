@@ -25,3 +25,43 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Android Studio
+.navigation/
+.gradle/
+local.properties
+
+# VS Code
+.vscode/
+.history/
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
