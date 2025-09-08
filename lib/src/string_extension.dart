@@ -214,18 +214,6 @@ extension StringEncryption on String {
     var digest = crypto.sha1.convert(data);
     return convert.hex.encode(digest.bytes);
   }
-
-  String rsa() {
-    return "";
-  }
-
-  String aes() {
-    return "";
-  }
-
-  String des() {
-    return "";
-  }
 }
 
 extension DebugTest on String {
