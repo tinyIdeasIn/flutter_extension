@@ -1,3 +1,6 @@
+## 1.0.3
+* Upgrade crypto to 3.0.5
+
 ## 1.0.2
 * Add: add example
 * Add README.md
