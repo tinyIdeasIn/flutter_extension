@@ -277,12 +277,12 @@ class _ColorDemoPageState extends State<ColorDemoPage> {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        color: color,
         borderRadius: BorderRadius.circular(8),
-        // 添加背景图案以显示透明效果
-        image: DecorationImage(
-          image: _createCheckerboardPattern(),
-          repeat: ImageRepeat.repeat,
+        // 创建棋盘格背景显示透明效果
+        gradient: LinearGradient(
+          colors: [Colors.white, ColorManager.grayEE],
+          stops: [0.5, 0.5],
+          tileMode: TileMode.repeated,
         ),
       ),
       child: Container(
@@ -303,10 +303,5 @@ class _ColorDemoPageState extends State<ColorDemoPage> {
         ),
       ),
     );
-  }
-
-  ImageProvider _createCheckerboardPattern() {
-    // 简单的棋盘格模式，用于显示透明效果
-    return AssetImage('assets/images/transparency_bg.png'); // 你可以添加一个棋盘格图片
   }
 }
